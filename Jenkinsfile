@@ -9,13 +9,13 @@ pipeline {
     }
     environment{
         def appVersion = '' // global var declaration 
-         nexusUrl = 'nexus.bhavya.store:8081'
+        nexusUrl = 'nexus.bhavya.store:8081'
     }
     stages {
         stage('read the version') {
             steps {
                script {               //grovvy sysntax
-                    def packageJson = readJson file: 'package.json'
+                    def packageJson = readJSON file: 'package.json'
                     appVersion = packageJson.version
                     echo "application version : $appVersion"
                }
