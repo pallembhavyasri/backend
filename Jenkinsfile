@@ -70,7 +70,7 @@ pipeline {
                     def params = [
                         string(name: 'appVersion', value: "${appVersion}")
                     ]
-                    build job: 'backend CD', parameters: params, wait: false // false here indicates just the CI is success and doesn't care about CD success or failure 
+                    build job: 'backend CD', parameters: params, wait: false // false here indicates just the CI is success and doesn't care about CD success or failure $ bulid job indicates the node name 
                 }
             }
         }
